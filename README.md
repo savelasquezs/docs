@@ -11,7 +11,6 @@ configuracion/
     └── catalogos-mip/
         └── productos.mdx
 snippets/
-├── app-link.jsx
 └── manual-video.jsx
 ```
 
@@ -31,17 +30,19 @@ Los videos aprobados se almacenan en Cloudflare R2.
 
 ## Enlaces al sistema
 
-Las páginas no enlazan directamente al dominio actual de la SPA. Usan `AppLink` desde `snippets/app-link.jsx`.
+Las páginas no enlazan directamente al dominio actual de la SPA. Los enlaces contextuales apuntan al resolver estable:
 
-`AppLink` recibe una ruta relativa, por ejemplo:
-
-```mdx
-<AppLink to="/configuracion/catalogos?tab=traps&estado=activos">
-  abrir Trampas directamente
-</AppLink>
+```text
+https://sr-doc-app-links.solucionesradicales1.workers.dev/open?to=<ruta-relativa-codificada>
 ```
 
-El componente apunta al Worker estable `sr-doc-app-links.solucionesradicales1.workers.dev`, que resuelve esa ruta contra el dominio vigente de la SPA. Si el dominio cambia, se actualiza únicamente el Worker y los enlaces existentes continúan funcionando.
+Ejemplo para Trampas activas:
+
+```text
+/open?to=%2Fconfiguracion%2Fcatalogos%3Ftab%3Dtraps%26estado%3Dactivos
+```
+
+El Worker resuelve la ruta contra el dominio vigente de la SPA. Si mañana la aplicación cambia a un dominio propio, se modifica una sola configuración en el Worker y todos los enlaces existentes siguen funcionando.
 
 ## Desarrollo local
 
