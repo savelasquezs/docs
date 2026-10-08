@@ -37,6 +37,10 @@ Si la interfaz y la documentación funcional se contradicen, detener únicamente
 - Los videos públicos se almacenan en `media/` dentro de este repositorio.
 - La URL publicada debe ser accesible sin autenticación.
 - No usar artefactos temporales de GitHub Actions como enlaces permanentes.
+- Los videos aprobados se publican en Cloudflare R2, bucket `sr-documentation-media`.
+- Mientras un video está en revisión puede usarse un origen temporal únicamente en una rama de preview.
+- Para páginas con video usar `ManualVideo` y `VideoTimestamp` desde `/snippets/manual-video.jsx`; no duplicar lógica de reproducción por página.
+- `VideoTimestamp` debe llevar al reproductor de la misma página y posicionarlo en el segundo exacto sin iniciar reproducción automáticamente.
 
 ## Contenido de usuario
 
