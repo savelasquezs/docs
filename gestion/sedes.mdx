@@ -1,0 +1,239 @@
+---
+title: "Gestión de sedes"
+sidebarTitle: "Sedes"
+description: "Crea y configura Sedes, contactos, operación y certificados vehiculares."
+icon: "building"
+keywords:
+  - "sede"
+  - "sucursal"
+  - "contacto principal"
+  - "WhatsApp"
+  - "correo"
+  - "vehículos"
+  - "certificado vehicular"
+  - "vigencia"
+---
+
+import { ManualVideo, VideoTimestamp } from '/snippets/manual-video.jsx';
+
+Las **Sedes** representan las ubicaciones operativas de un cliente de tipo **Negocio**. Cada Sede conserva sus datos de contacto, configuración del servicio, plano y configuración vehicular.
+
+<ManualVideo id="video-sedes" src="https://pub-2559f81105d04a23a042fba8f4f13697.r2.dev/manual/clientes-gestion-sedes/v1/clientes-gestion-sedes-v1.mp4" title="Gestión de sedes · 2:11" />
+
+<Note>
+  Las Sedes se administran dentro de un cliente **Negocio**. Los clientes **Casa** no utilizan Sedes.
+</Note>
+
+## Dónde encontrar las Sedes
+
+Abre **Clientes**, selecciona un cliente de tipo **Negocio** y entra a la pestaña **Sedes**.
+
+<Card title="Abrir Clientes" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/clientes" cta="Abrir en el sistema">
+  Abre Clientes y selecciona el Negocio que quieres administrar.
+</Card>
+
+<VideoTimestamp target="video-sedes" seconds={8.222}>Ver en el video · 0:08</VideoTimestamp>
+
+En **Sedes** puedes consultar las ubicaciones existentes y seleccionar **Agregar Sede**.
+
+<VideoTimestamp target="video-sedes" seconds={12.162}>Ver en el video · 0:12</VideoTimestamp>
+
+## Crear una Sede
+
+Selecciona **Agregar Sede**.
+
+<VideoTimestamp target="video-sedes" seconds={17.016}>Ver en el video · 0:17</VideoTimestamp>
+
+### Datos de la Sede
+
+Registra:
+
+- **Nombre**
+- **Dirección**
+- **Contacto principal**
+
+<VideoTimestamp target="video-sedes" seconds={21.048}>Ver en el video · 0:21</VideoTimestamp>
+
+### Celular del contacto
+
+El **Celular** es obligatorio.
+
+Después de guardar, el número se muestra con acceso rápido a **WhatsApp**.
+
+<VideoTimestamp target="video-sedes" seconds={26.191}>Ver en el video · 0:26</VideoTimestamp>
+
+### Correo del contacto
+
+El **Correo** principal es opcional.
+
+Cuando está registrado, la Sede muestra un acceso rápido para redactar un correo al contacto.
+
+<VideoTimestamp target="video-sedes" seconds={32.510}>Ver en el video · 0:33</VideoTimestamp>
+
+### Correos adicionales
+
+También puedes:
+
+- agregar **Correos adicionales**;
+- activar **Incluir correos generales del cliente**.
+
+<VideoTimestamp target="video-sedes" seconds={39.107}>Ver en el video · 0:39</VideoTimestamp>
+
+## Configuración operativa
+
+Registra:
+
+- **Valor en COP**
+- **Periodicidad en meses**
+- **Duración en minutos**
+
+<VideoTimestamp target="video-sedes" seconds={44.831}>Ver en el video · 0:45</VideoTimestamp>
+
+También puedes indicar si la Sede **Maneja visita de refuerzo**.
+
+<VideoTimestamp target="video-sedes" seconds={51.204}>Ver en el video · 0:51</VideoTimestamp>
+
+## Vehículos de la Sede
+
+Activa **Maneja vehículos** cuando la Sede tendrá vehículos asociados.
+
+<VideoTimestamp target="video-sedes" seconds={55.263}>Ver en el video · 0:55</VideoTimestamp>
+
+Al activarlo aparece la configuración de **Certificado vehicular**.
+
+### Certificado para vehículos
+
+Si los vehículos necesitan certificado, activa **Genera certificado para vehículos**.
+
+<VideoTimestamp target="video-sedes" seconds={60.167}>Ver en el video · 1:00</VideoTimestamp>
+
+Después define la **Vigencia en meses**.
+
+<VideoTimestamp target="video-sedes" seconds={65.404}>Ver en el video · 1:05</VideoTimestamp>
+
+<Note>
+  Esta configuración define cómo funcionarán los certificados de los vehículos de la Sede. Los vehículos se registrarán posteriormente dentro de la propia Sede.
+</Note>
+
+<VideoTimestamp target="video-sedes" seconds={73.425}>Ver en el video · 1:13</VideoTimestamp>
+
+## Plano de la Sede
+
+El plano es opcional y se almacena como archivo privado de la Sede.
+
+<VideoTimestamp target="video-sedes" seconds={80.495}>Ver en el video · 1:20</VideoTimestamp>
+
+## Guardar la Sede
+
+Selecciona **Crear Sede**.
+
+<VideoTimestamp target="video-sedes" seconds={85.378}>Ver en el video · 1:25</VideoTimestamp>
+
+La nueva Sede aparece en la ficha del cliente con su:
+
+- nombre;
+- dirección;
+- contacto;
+- estado.
+
+<VideoTimestamp target="video-sedes" seconds={89.618}>Ver en el video · 1:30</VideoTimestamp>
+
+## Accesos rápidos de contacto
+
+### WhatsApp
+
+El celular del contacto principal aparece junto al icono de WhatsApp. Selecciónalo para iniciar una conversación.
+
+<VideoTimestamp target="video-sedes" seconds={94.435}>Ver en el video · 1:34</VideoTimestamp>
+
+### Correo
+
+Si existe un correo principal, la Sede muestra un botón de correo que abre el cliente de correo del usuario con esa dirección como destinatario.
+
+<VideoTimestamp target="video-sedes" seconds={99.433}>Ver en el video · 1:39</VideoTimestamp>
+
+## Abrir el detalle de una Sede
+
+Selecciona el nombre de la Sede.
+
+<VideoTimestamp target="video-sedes" seconds={104.993}>Ver en el video · 1:45</VideoTimestamp>
+
+En **Resumen** puedes consultar:
+
+- contacto principal;
+- valor del servicio;
+- periodicidad;
+- duración;
+- número de Áreas;
+- si maneja vehículos;
+- plano.
+
+<VideoTimestamp target="video-sedes" seconds={108.202}>Ver en el video · 1:48</VideoTimestamp>
+
+## Editar la configuración
+
+Selecciona **Editar Sede** para actualizar la información.
+
+La configuración vehicular se conserva y puede modificarse desde el mismo formulario.
+
+<VideoTimestamp target="video-sedes" seconds={114.215}>Ver en el video · 1:54</VideoTimestamp>
+
+## Configuración de vehículos
+
+| Campo | Cuándo aparece | Qué significa |
+| --- | --- | --- |
+| **Maneja vehículos** | Siempre | Indica que esta Sede tendrá vehículos asociados. |
+| **Genera certificado para vehículos** | Si Maneja vehículos está activo | Indica si cada vehículo necesitará certificado. |
+| **Vigencia en meses** | Si genera certificado | Define cuánto dura el certificado vehicular. |
+
+<Warning>
+  Esta sección configura el comportamiento de los vehículos. El registro de cada vehículo se realiza posteriormente dentro de la Sede.
+</Warning>
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Dónde creo una Sede?">
+    Abre un cliente de tipo **Negocio**, entra a **Sedes** y selecciona **Agregar Sede**.
+
+    <VideoTimestamp target="video-sedes" seconds={17.016}>
+  Ver en el video · 0:17
+</VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Puedo escribir por WhatsApp desde la Sede?">
+    Sí. El celular del contacto principal se muestra con acceso rápido a WhatsApp.
+
+    <VideoTimestamp target="video-sedes" seconds={94.435}>
+  Ver en el video · 1:34
+</VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Puedo enviar un correo desde la Sede?">
+    Sí. Si registraste el correo principal, aparece un botón para abrir un mensaje dirigido a esa dirección.
+
+    <VideoTimestamp target="video-sedes" seconds={99.433}>
+  Ver en el video · 1:39
+</VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Qué significa Maneja vehículos?">
+    Indica que la Sede tendrá vehículos asociados y habilita la configuración del certificado vehicular.
+  </Accordion>
+
+  <Accordion title="¿Todos los vehículos deben generar certificado?">
+    No. Solo cuando activas **Genera certificado para vehículos**.
+  </Accordion>
+
+  <Accordion title="¿Dónde defino cuánto dura el certificado del vehículo?">
+    Activa **Maneja vehículos** y **Genera certificado para vehículos**. Después registra la **Vigencia en meses**.
+
+    <VideoTimestamp target="video-sedes" seconds={65.404}>
+  Ver en el video · 1:05
+</VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Dónde creo los vehículos?">
+    Los vehículos se registrarán posteriormente dentro de la propia Sede. Esta pantalla solo deja preparada su configuración.
+  </Accordion>
+</AccordionGroup>
