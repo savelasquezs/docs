@@ -28,13 +28,15 @@ Si la interfaz y la documentación funcional se contradicen, detener únicamente
 - Explicar primero el objetivo y luego el procedimiento.
 - Evitar texto obvio, repetitivo o decorativo.
 - La documentación escrita es la referencia principal; el video es apoyo visual.
+- Cuando una pantalla del sistema tenga una URL directa, incluir un enlace contextual mediante `AppLink`.
+- Nunca hardcodear el dominio de la SPA dentro de una página MDX. `AppLink` debe recibir únicamente una ruta relativa.
+- Los enlaces al sistema pasan por el resolver estable `sr-doc-app-links`; un cambio de dominio de la SPA se resuelve allí una sola vez.
 
 ## Videos
 
 - Cada módulo o flujo principal puede tener un video integral.
 - No crear un video por cada botón si varias acciones pertenecen al mismo flujo.
 - Los enlaces **Ver en el video** deben apuntar al segundo exacto en que comienza la acción.
-- Los videos públicos se almacenan en `media/` dentro de este repositorio.
 - La URL publicada debe ser accesible sin autenticación.
 - No usar artefactos temporales de GitHub Actions como enlaces permanentes.
 - Los videos aprobados se publican en Cloudflare R2, bucket `sr-documentation-media`.

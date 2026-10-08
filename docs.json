@@ -59,7 +59,7 @@
     "primary": {
       "type": "button",
       "label": "Abrir sistema",
-      "href": "https://soluciones-radicales.solucionesradicales1.workers.dev"
+      "href": "https://sr-doc-app-links.solucionesradicales1.workers.dev/"
     }
   }
 }
