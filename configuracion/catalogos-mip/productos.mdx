@@ -1,0 +1,289 @@
+---
+title: "Gestión de productos"
+sidebarTitle: "Productos"
+description: "Crea, consulta, edita, desactiva, reactiva y elimina productos del catálogo MIP."
+icon: "flask-conical"
+keywords:
+  - "crear producto"
+  - "editar producto"
+  - "desactivar producto"
+  - "reactivar producto"
+  - "eliminar producto"
+  - "ficha técnica"
+  - "plagas que controla"
+  - "métodos de aplicación"
+  - "dosis de aplicación"
+---
+
+Los productos son los insumos que pueden utilizarse durante un servicio MIP. Cada registro conserva su información técnica, los métodos de aplicación permitidos, las plagas que controla y, opcionalmente, su ficha técnica.
+
+<Card title="Ver video completo · Gestión de productos (2:11)" icon="circle-play" href="https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4">
+  Recorre creación, cobertura de plagas, ficha técnica, detalle, acciones, desactivación e Inactivos.
+</Card>
+
+<Note>
+Necesitas estar operando con el rol activo **Administrador** para crear o modificar productos.
+</Note>
+
+## Dónde encontrar los productos
+
+Abre **Configuración → Catálogos MIP → Productos**.
+
+[Ver en el video · 0:07](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=7.396)
+
+En la pantalla encontrarás las pestañas **Activos** e **Inactivos**, el buscador y la tabla del catálogo.
+
+[Ver en el video · 0:13](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=13.260)
+
+El buscador encuentra coincidencias por nombre comercial, principio activo o composición, laboratorio o fabricante y registro sanitario.
+
+## Crear un producto
+
+Selecciona **Nuevo producto**.
+
+[Ver en el video · 0:18](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=18.453)
+
+<Steps>
+  <Step title="Completa los campos obligatorios">
+    Debes registrar:
+
+    - **Nombre comercial**
+    - **Principio activo / composición**
+    - **Dosis de aplicación**
+    - al menos un **Método de aplicación**
+    - al menos una categoría o una plaga en **Plagas que controla**
+
+    [Ver en el video · 0:22](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=21.767)
+  </Step>
+
+  <Step title="Registra la identificación del producto">
+    Escribe el **Nombre comercial** tal como quieres reconocer el producto en el catálogo y el **Principio activo / composición** que lo identifica técnicamente.
+
+    [Ver en el video · 0:25](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=25.035)
+  </Step>
+
+  <Step title="Registra la dosis de aplicación">
+    La dosis debe incluir la cantidad y su unidad, por ejemplo `10 ml / L`.
+
+    Esta dosis es una referencia del catálogo. La cantidad efectivamente utilizada se registra durante el servicio.
+
+    [Ver en el video · 0:29](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=29.412)
+  </Step>
+
+  <Step title="Completa la información adicional">
+    Puedes registrar **Registro sanitario**, **Grado toxicológico** y **Laboratorio / fabricante**.
+
+    [Ver en el video · 0:32](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=32.399)
+
+    También puedes registrar el **Antídoto** cuando aplique.
+
+    [Ver en el video · 0:38](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=38.057)
+  </Step>
+</Steps>
+
+<Tip>
+**Lote** y **fecha de vencimiento** no pertenecen al catálogo de productos. Esos datos corresponden al servicio en el que se utiliza el producto.
+</Tip>
+
+## Definir qué plagas controla
+
+En **Plagas que controla** puedes combinar categorías completas y plagas individuales.
+
+[Ver en el video · 0:43](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=42.561)
+
+### Seleccionar una categoría completa
+
+Puedes marcar una categoría como **Insectos rastreros**, **Insectos voladores** o **Roedores**.
+
+[Ver en el video · 0:46](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=46.497)
+
+Al seleccionar una categoría, el producto queda asociado a esa categoría. Las plagas que pertenecen a ella se muestran como incluidas automáticamente.
+
+[Ver en el video · 0:51](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=50.753)
+
+<Note>
+La categoría se conserva como una relación del producto, no como una copia fija de las plagas existentes. Si posteriormente se agrega una nueva plaga a esa categoría, podrá quedar cubierta por el producto sin tener que editarlo únicamente por ese motivo.
+</Note>
+
+### Agregar una plaga individual
+
+También puedes seleccionar una plaga concreta sin incluir toda su categoría. Esto permite combinar, por ejemplo, una categoría completa con una plaga específica de otra categoría.
+
+[Ver en el video · 0:55](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=54.845)
+
+Cuando termines, selecciona **Listo**.
+
+[Ver en el video · 1:00](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=59.951)
+
+<Warning>
+La clasificación de monitoreo **Rastreros / Voladores** y la cobertura química del producto son conceptos diferentes. Por ejemplo, un roedor puede pertenecer al grupo de monitoreo Rastreros y, al mismo tiempo, a la categoría de producto Roedores.
+</Warning>
+
+## Seleccionar métodos de aplicación
+
+Abre **Métodos de aplicación** y selecciona uno o varios métodos que correspondan al producto.
+
+[Ver en el video · 1:03](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=62.853)
+
+Puedes combinar varios métodos en el mismo producto.
+
+[Ver en el video · 1:07](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=67.159)
+
+<Note>
+Los métodos disponibles se administran desde el catálogo auxiliar **Métodos de aplicación**.
+</Note>
+
+## Adjuntar la ficha técnica
+
+La ficha técnica es opcional. Puedes adjuntar:
+
+- PDF
+- JPG o JPEG
+- PNG
+- WebP
+
+[Ver en el video · 1:12](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=71.700)
+
+Selecciona **Adjuntar archivo** y elige el documento.
+
+[Ver en el video · 1:17](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=76.857)
+
+El sistema conserva el archivo junto al producto. Si editas posteriormente un producto que ya tiene ficha, puedes **Ver**, **Quitar** o **Reemplazar ficha técnica**.
+
+## Guardar el producto
+
+Selecciona **Crear producto**.
+
+[Ver en el video · 1:22](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=81.572)
+
+Si existe un archivo adjunto, el sistema puede mostrar las fases **Comprimiendo…**, **Subiendo…** y **Guardando…**. Espera a que el proceso termine antes de cerrar la pantalla.
+
+[Ver en el video · 1:25](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=85.063)
+
+Cuando finalice, el producto aparecerá en **Activos**.
+
+[Ver en el video · 1:28](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=88.099)
+
+## Consultar el detalle de un producto
+
+Selecciona el nombre del producto en la tabla.
+
+[Ver en el video · 1:32](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=91.796)
+
+El detalle muestra la información principal del registro, incluyendo:
+
+- principio activo o composición;
+- dosis de aplicación;
+- métodos;
+- cobertura de plagas;
+- registro sanitario;
+- grado toxicológico;
+- laboratorio o fabricante;
+- antídoto;
+- estado.
+
+[Ver en el video · 1:35](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=94.679)
+
+Si el producto tiene una ficha técnica guardada, selecciona **Ver ficha técnica** para abrirla.
+
+[Ver en el video · 1:40](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=100.315)
+
+## Editar un producto
+
+En la columna **Acciones**, selecciona **Editar**. Se abrirá el mismo formulario utilizado para crear el producto con la información actual cargada.
+
+Modifica los campos necesarios y selecciona **Guardar cambios**.
+
+Los productos pueden conservar métodos o plagas que fueron desactivados después de haber sido asociados. El sistema los identifica como selecciones inactivas conservadas para no perder el significado histórico del registro.
+
+## Desactivar un producto
+
+Usa **Desactivar** cuando el producto ya no deba estar disponible para nuevas selecciones, pero necesites conservar su historial.
+
+Las acciones de la fila permiten **Editar**, **Desactivar** y **Eliminar**.
+
+[Ver en el video · 1:45](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=105.359)
+
+<Steps>
+  <Step title="Selecciona Desactivar">
+    Usa la acción **Desactivar** en la fila del producto.
+
+    [Ver en el video · 1:52](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=111.604)
+  </Step>
+
+  <Step title="Confirma la acción">
+    El sistema te indicará que el producto dejará de ofrecerse para nuevas selecciones y que su historial se conservará.
+
+    [Ver en el video · 1:57](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=116.559)
+  </Step>
+
+  <Step title="Comprueba Inactivos">
+    Abre la pestaña **Inactivos**. El producto aparecerá allí.
+
+    [Ver en el video · 1:58](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=118.423)
+  </Step>
+</Steps>
+
+## Reactivar un producto
+
+Abre **Inactivos**, localiza el producto y selecciona **Reactivar**. Después de confirmar, volverá a estar disponible en **Activos** y para nuevas selecciones.
+
+## Eliminar un producto
+
+Usa **Eliminar** únicamente cuando el registro no tenga referencias ni historial.
+
+<Warning>
+Si el producto ya fue utilizado, eliminarlo no es la opción adecuada. Desactívalo para impedir nuevas selecciones y conservar el historial.
+</Warning>
+
+## Diferencia entre desactivar y eliminar
+
+| Acción | Resultado | Historial |
+| --- | --- | --- |
+| **Desactivar** | Oculta el producto de nuevas selecciones y lo mueve a **Inactivos**. | Se conserva. |
+| **Reactivar** | Devuelve el producto a **Activos** y a nuevas selecciones. | Se conserva. |
+| **Eliminar** | Retira definitivamente un producto que no tiene referencias ni historial. | Solo es posible cuando no existe historial que proteger. |
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Cómo agrego una ficha técnica a un producto?">
+    Crea o edita el producto, busca **Ficha técnica** y selecciona **Adjuntar archivo**. Puedes usar PDF, JPG, JPEG, PNG o WebP.
+
+    [Ver en el video · 1:17](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=76.857)
+  </Accordion>
+
+  <Accordion title="¿Puedo seleccionar una categoría y una plaga individual al mismo tiempo?">
+    Sí. La cobertura puede combinar categorías completas y plagas individuales.
+
+    [Ver en el video · 0:55](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=54.845)
+  </Accordion>
+
+  <Accordion title="¿Cómo hago para que un producto controle todos los insectos rastreros?">
+    En **Plagas que controla**, selecciona la categoría **Insectos rastreros**. No necesitas marcar una por una las plagas que ya pertenecen a esa categoría.
+
+    [Ver en el video · 0:46](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=46.497)
+  </Accordion>
+
+  <Accordion title="¿Dónde registro el lote y el vencimiento?">
+    No se registran en el catálogo. El lote y el vencimiento corresponden al servicio donde se utiliza el producto.
+  </Accordion>
+
+  <Accordion title="¿Por qué no puedo eliminar un producto?">
+    La eliminación solo corresponde a registros sin referencias ni historial. Si ya fue utilizado, desactívalo.
+  </Accordion>
+
+  <Accordion title="¿Dónde aparecen los productos desactivados?">
+    En la pestaña **Inactivos** del catálogo de Productos.
+
+    [Ver en el video · 1:58](https://raw.githubusercontent.com/savelasquezs/SPA-soluciones-radicales/develop/docs-media/published/mip-gestion-productos-v4.mp4#t=118.423)
+  </Accordion>
+
+  <Accordion title="¿Cuál es la diferencia entre desactivar y eliminar?">
+    **Desactivar** conserva el producto y su historial, pero evita nuevas selecciones. **Eliminar** retira definitivamente un registro que todavía no tiene referencias ni historial.
+  </Accordion>
+
+  <Accordion title="¿Cómo vuelvo a activar un producto?">
+    Abre **Inactivos**, localiza el producto y selecciona **Reactivar**.
+  </Accordion>
+</AccordionGroup>

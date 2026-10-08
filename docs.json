@@ -24,7 +24,10 @@
           {
             "group": "Catálogos MIP",
             "icon": "list-tree",
-            "pages": []
+            "pages": [
+              "configuracion/catalogos-mip",
+              "configuracion/catalogos-mip/productos"
+            ]
           }
         ]
       }
