@@ -1,55 +1,54 @@
-# Mintlify Starter Kit
+# Manual de usuario · Soluciones Radicales MIP
 
-Use the starter kit to get your docs deployed and ready to customize.
+Documentación pública de uso de Soluciones Radicales MIP, publicada con Mintlify.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Estructura
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+```text
+index.mdx
+configuracion/
+└── catalogos-mip.mdx
+    └── catalogos-mip/
+        └── productos.mdx
+media/
+└── mip-gestion-productos-v4.mp4
+```
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+La navegación se configura en `docs.json`.
 
-## AI-assisted writing
+## Fuentes de verdad
 
-Set up your AI coding tool to work with Mintlify:
+El comportamiento funcional se documenta a partir del repositorio `savelasquezs/SPA-soluciones-radicales`, especialmente `docs/product/`, la interfaz vigente y sus pruebas.
+
+Este repositorio contiene documentación para usuarios. La arquitectura, migraciones y detalles internos permanecen en el repositorio de la aplicación.
+
+## Videos
+
+Los videos son material complementario. Las páginas explican el flujo completo en texto y enlazan al segundo exacto del video cuando una interacción se entiende mejor de forma visual.
+
+Los archivos públicos permanentes se almacenan en `media/`.
+
+## Desarrollo local
+
+Instala la CLI de Mintlify:
 
 ```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the [AI tools guides](/ai-tools) for tool-specific setup.
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+Desde la raíz del repositorio:
 
-```
+```bash
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+La vista local se abre normalmente en `http://localhost:3000`.
 
-## Publishing changes
+## Publicación
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+La rama `main` es la fuente publicada por Mintlify. Los cambios de contenido deben mantener sincronizados:
 
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+- páginas MDX;
+- navegación;
+- medios enlazados;
+- metadatos para búsqueda.
