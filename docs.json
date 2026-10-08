@@ -30,7 +30,8 @@
                 "icon": "list-tree",
                 "pages": [
                   "configuracion/catalogos-mip",
-                  "configuracion/catalogos-mip/productos"
+                  "configuracion/catalogos-mip/productos",
+                  "configuracion/catalogos-mip/trampas"
                 ]
               }
             ]
