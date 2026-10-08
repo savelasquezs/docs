@@ -28,9 +28,9 @@ Si la interfaz y la documentación funcional se contradicen, detener únicamente
 - Explicar primero el objetivo y luego el procedimiento.
 - Evitar texto obvio, repetitivo o decorativo.
 - La documentación escrita es la referencia principal; el video es apoyo visual.
-- Cuando una pantalla del sistema tenga una URL directa, incluir un enlace contextual mediante `AppLink`.
-- Nunca hardcodear el dominio de la SPA dentro de una página MDX. `AppLink` debe recibir únicamente una ruta relativa.
-- Los enlaces al sistema pasan por el resolver estable `sr-doc-app-links`; un cambio de dominio de la SPA se resuelve allí una sola vez.
+- Cuando una pantalla del sistema tenga una URL directa, incluir un enlace contextual mediante el resolver estable de Cloudflare.
+- Nunca enlazar directamente al dominio actual de la SPA desde una página MDX.
+- Los enlaces al sistema pasan por `https://sr-doc-app-links.solucionesradicales1.workers.dev/open?to=...`; el parámetro `to` contiene una ruta relativa codificada. Un cambio de dominio de la SPA se resuelve en el Worker una sola vez.
 
 ## Videos
 
