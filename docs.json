@@ -61,5 +61,27 @@
       "label": "Abrir sistema",
       "href": "https://sr-doc-app-links.solucionesradicales1.workers.dev/"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/go/trampas/activos",
+      "destination": "https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/trampas/activos",
+      "permanent": false
+    },
+    {
+      "source": "/go/trampas/inactivos",
+      "destination": "https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/trampas/inactivos",
+      "permanent": false
+    },
+    {
+      "source": "/go/productos/activos",
+      "destination": "https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/productos/activos",
+      "permanent": false
+    },
+    {
+      "source": "/go/productos/inactivos",
+      "destination": "https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/productos/inactivos",
+      "permanent": false
+    }
+  ]
 }
