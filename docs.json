@@ -7,7 +7,7 @@
     "light": "#0877B9",
     "dark": "#5B8F18"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "navigation": {
     "pages": [
       {
@@ -34,8 +34,8 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
   },
   "contextual": {
     "options": [
@@ -49,5 +49,22 @@
       "vscode"
     ]
   },
-  "description": "Manual de usuario de Soluciones Radicales MIP: configuración, operación, catálogos y procesos del sistema."
+  "description": "Manual de usuario de Soluciones Radicales MIP: configuración, operación, catálogos y procesos del sistema.",
+  "navbar": {
+    "links": [
+      {
+        "label": "Catálogos MIP",
+        "href": "/configuracion/catalogos-mip"
+      },
+      {
+        "label": "Productos",
+        "href": "/configuracion/catalogos-mip/productos"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Abrir sistema",
+      "href": "https://soluciones-radicales.solucionesradicales1.workers.dev"
+    }
+  }
 }
