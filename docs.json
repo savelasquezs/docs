@@ -9,24 +9,30 @@
   },
   "favicon": "/favicon.png",
   "navigation": {
-    "pages": [
+    "languages": [
       {
-        "group": "Inicio",
-        "pages": [
-          "index"
-        ],
-        "icon": "house"
-      },
-      {
-        "group": "Configuración",
-        "icon": "settings",
+        "language": "es",
+        "default": true,
         "pages": [
           {
-            "group": "Catálogos MIP",
-            "icon": "list-tree",
+            "group": "Inicio",
+            "icon": "house",
             "pages": [
-              "configuracion/catalogos-mip",
-              "configuracion/catalogos-mip/productos"
+              "index"
+            ]
+          },
+          {
+            "group": "Configuración",
+            "icon": "settings",
+            "pages": [
+              {
+                "group": "Catálogos MIP",
+                "icon": "list-tree",
+                "pages": [
+                  "configuracion/catalogos-mip",
+                  "configuracion/catalogos-mip/productos"
+                ]
+              }
             ]
           }
         ]
@@ -36,18 +42,6 @@
   "logo": {
     "light": "/logo/light.png",
     "dark": "/logo/dark.png"
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
   },
   "description": "Manual de usuario de Soluciones Radicales MIP: configuración, operación, catálogos y procesos del sistema.",
   "navbar": {
