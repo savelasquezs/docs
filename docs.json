@@ -25,7 +25,9 @@
                 "pages": [
                   "configuracion/catalogos-mip",
                   "configuracion/catalogos-mip/productos",
-                  "configuracion/catalogos-mip/trampas"
+                  "configuracion/catalogos-mip/trampas",
+                  "configuracion/catalogos-mip/plagas",
+                  "configuracion/catalogos-mip/criterios"
                 ]
               }
             ]
