@@ -1,0 +1,239 @@
+---
+title: "Gestión de clientes"
+sidebarTitle: "Clientes"
+description: "Crea y administra clientes Negocio y Casa."
+icon: "users"
+keywords:
+  - "clientes"
+  - "negocio"
+  - "casa"
+  - "crear cliente"
+  - "certificado de establecimiento"
+  - "WhatsApp"
+  - "cliente residencial"
+---
+
+import { ManualVideo, VideoTimestamp } from '/snippets/manual-video.jsx';
+
+El módulo **Clientes** administra las personas o empresas atendidas por Soluciones Radicales. Existen dos tipos: **Negocio** y **Casa**.
+
+<ManualVideo
+  id="video-clientes"
+  src="https://pub-2559f81105d04a23a042fba8f4f13697.r2.dev/manual/clientes-gestion-clientes/v1/clientes-gestion-clientes-v1.mp4"
+  title="Gestión de clientes · 2:11"
+/>
+
+<Note>
+  Necesitas estar operando con el rol activo **Administrador** para crear o modificar clientes.
+</Note>
+
+## Dónde encontrar los clientes
+
+Abre **Gestión → Clientes**.
+
+<Card title="Abrir Clientes" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/clientes" cta="Abrir en el sistema">
+  Ir directamente al módulo de Clientes.
+</Card>
+
+<VideoTimestamp target="video-clientes" seconds={9.214}>Ver en el video · 0:09</VideoTimestamp>
+
+La pantalla separa los clientes entre **Activos** e **Inactivos**.
+
+## Buscar y filtrar clientes
+
+Puedes buscar por **nombre, NIT o celular** y filtrar por tipo:
+
+- **Negocio**
+- **Casa**
+
+<VideoTimestamp target="video-clientes" seconds={16.854}>Ver en el video · 0:17</VideoTimestamp>
+
+## Los dos tipos de cliente
+
+Selecciona **Nuevo cliente** para iniciar el registro.
+
+<VideoTimestamp target="video-clientes" seconds={23.861}>Ver en el video · 0:24</VideoTimestamp>
+
+El campo **Tipo de cliente** determina el formulario y el comportamiento posterior.
+
+<VideoTimestamp target="video-clientes" seconds={27.277}>Ver en el video · 0:27</VideoTimestamp>
+
+| Tipo | Para qué se usa | Datos principales |
+| --- | --- | --- |
+| **Negocio** | Empresas, comercios, instituciones u organizaciones. | Razón social, NIT, correos y vigencia del certificado de establecimiento. |
+| **Casa** | Servicios residenciales. | Nombre, celular y dirección. |
+
+<Warning>
+  El tipo de cliente no se cambia después de crearlo. Si necesitas representar un contexto diferente, crea el registro con el tipo correcto desde el inicio.
+</Warning>
+
+## Crear un Negocio
+
+<Steps>
+  <Step title="Registra nombre y NIT">
+    Completa **Nombre / razón social** y **NIT**.
+
+    <VideoTimestamp target="video-clientes" seconds={35.422}>
+      Ver en el video · 0:35
+    </VideoTimestamp>
+  </Step>
+
+  <Step title="Agrega los correos generales">
+    Puedes registrar uno o varios correos. Escríbelos uno por línea o separados por coma.
+
+    Estos correos pueden heredarse posteriormente en las Sedes del cliente.
+
+    <VideoTimestamp target="video-clientes" seconds={39.332}>
+      Ver en el video · 0:39
+    </VideoTimestamp>
+  </Step>
+
+  <Step title="Define la vigencia del certificado de establecimiento">
+    Los clientes **Negocio** manejan certificado de establecimiento. Define la vigencia en meses.
+
+    Esta configuración pertenece al cliente y aplica a sus Sedes.
+
+    <VideoTimestamp target="video-clientes" seconds={45.227}>
+      Ver en el video · 0:45
+    </VideoTimestamp>
+  </Step>
+
+  <Step title="Crea el cliente">
+    Selecciona **Crear cliente**.
+
+    <VideoTimestamp target="video-clientes" seconds={52.334}>
+      Ver en el video · 0:52
+    </VideoTimestamp>
+  </Step>
+</Steps>
+
+El Negocio aparecerá en **Activos** y quedará disponible para agregar Sedes.
+
+<VideoTimestamp target="video-clientes" seconds={56.162}>Ver en el video · 0:56</VideoTimestamp>
+
+## Consultar un Negocio
+
+Selecciona el nombre del cliente.
+
+En el resumen puedes consultar:
+
+- NIT;
+- cantidad de Sedes;
+- vigencia del certificado de establecimiento.
+
+<VideoTimestamp target="video-clientes" seconds={61.015}>Ver en el video · 1:01</VideoTimestamp>
+
+Desde esta ficha también se administran las **Sedes** del Negocio. Consulta [Gestión de sedes](/clientes/sedes) para ese flujo.
+
+## Crear una Casa
+
+Regresa a **Clientes**, selecciona **Nuevo cliente** y elige **Casa**.
+
+<VideoTimestamp target="video-clientes" seconds={72.123}>Ver en el video · 1:12</VideoTimestamp>
+
+El formulario se simplifica automáticamente.
+
+### Datos requeridos
+
+Una Casa solo necesita:
+
+- **Nombre**
+- **Celular**
+- **Dirección**
+
+<VideoTimestamp target="video-clientes" seconds={76.676}>Ver en el video · 1:17</VideoTimestamp>
+
+<Note>
+  Una **Casa** no maneja certificado de establecimiento y no participa en el flujo de envío de informes.
+</Note>
+
+<VideoTimestamp target="video-clientes" seconds={80.778}>Ver en el video · 1:21</VideoTimestamp>
+
+Completa los datos y selecciona **Crear cliente**.
+
+<VideoTimestamp target="video-clientes" seconds={86.628}>Ver en el video · 1:27</VideoTimestamp>
+
+La Casa aparece en **Activos** con su celular y sin Sedes asociadas.
+
+<VideoTimestamp target="video-clientes" seconds={91.980}>Ver en el video · 1:32</VideoTimestamp>
+
+## WhatsApp en clientes Casa
+
+El celular de una Casa se muestra con acceso rápido a **WhatsApp**.
+
+<VideoTimestamp target="video-clientes" seconds={95.965}>Ver en el video · 1:36</VideoTimestamp>
+
+Selecciona el número para abrir la conversación en WhatsApp.
+
+## Consultar una Casa
+
+Selecciona el nombre del cliente. El resumen muestra:
+
+- celular;
+- dirección.
+
+Las Casas no muestran administración de Sedes.
+
+<VideoTimestamp target="video-clientes" seconds={101.676}>Ver en el video · 1:42</VideoTimestamp>
+
+## Editar, eliminar o desactivar
+
+Desde el listado puedes:
+
+- **Editar** el cliente;
+- **Eliminarlo** si todavía no tiene historial ni dependencias;
+- **Desactivarlo** cuando ya tiene información que debe conservarse.
+
+<VideoTimestamp target="video-clientes" seconds={108.897}>Ver en el video · 1:49</VideoTimestamp>
+
+Los clientes desactivados aparecen en **Inactivos** y pueden reactivarse posteriormente.
+
+<VideoTimestamp target="video-clientes" seconds={116.452}>Ver en el video · 1:56</VideoTimestamp>
+
+## Diferencia entre Negocio y Casa
+
+| Función | Negocio | Casa |
+| --- | :---: | :---: |
+| NIT | Sí | No |
+| Correos generales | Sí | No |
+| Certificado de establecimiento | Sí | No |
+| Sedes | Sí | No |
+| Celular y dirección en el cliente | No | Sí |
+| Acceso rápido a WhatsApp | — | Sí |
+| Envío de informes | Sí, según el flujo operativo | No |
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Cuál es la diferencia entre Negocio y Casa?">
+    **Negocio** usa la configuración completa y puede tener Sedes. **Casa** usa un formulario simplificado con nombre, celular y dirección.
+
+    <VideoTimestamp target="video-clientes" seconds={27.277}>
+      Ver en el video · 0:27
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Una Casa genera certificado?">
+    No. El certificado de establecimiento corresponde a clientes de tipo **Negocio**.
+  </Accordion>
+
+  <Accordion title="¿A una Casa se le envían informes?">
+    No. Los clientes de tipo **Casa** no participan en el flujo de envío de informes.
+  </Accordion>
+
+  <Accordion title="¿Puedo agregar una Sede a una Casa?">
+    No. Las Sedes pertenecen a clientes de tipo **Negocio**.
+  </Accordion>
+
+  <Accordion title="¿Puedo hablar por WhatsApp desde el sistema?">
+    Sí. En clientes Casa, el celular se presenta como acceso rápido a WhatsApp.
+
+    <VideoTimestamp target="video-clientes" seconds={95.965}>
+      Ver en el video · 1:36
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Qué hago si un cliente ya tiene historial y no quiero usarlo más?">
+    Desactívalo. De esa forma deja de estar disponible en Activos sin perder su información histórica.
+  </Accordion>
+</AccordionGroup>

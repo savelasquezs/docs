@@ -16,6 +16,14 @@
         "pages": [
           "index",
           {
+            "group": "Clientes",
+            "icon": "building-2",
+            "pages": [
+              "clientes",
+              "clientes/sedes"
+            ]
+          },
+          {
             "group": "Configuración",
             "icon": "settings",
             "pages": [
