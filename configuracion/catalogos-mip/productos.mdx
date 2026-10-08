@@ -37,6 +37,21 @@ En la pantalla encontrarás las pestañas **Activos** e **Inactivos**, el buscad
 
 El buscador encuentra coincidencias por nombre comercial, principio activo o composición, laboratorio o fabricante y registro sanitario.
 
+## Campos del producto
+
+| Campo | Requerido | Uso |
+| --- | --- | --- |
+| **Nombre comercial** | Sí | Nombre con el que identificarás el producto en el catálogo. |
+| **Principio activo / composición** | Sí | Composición técnica principal del producto. |
+| **Dosis de aplicación** | Sí | Dosis de referencia con su unidad. |
+| **Registro sanitario** | No | Número o identificación sanitaria del producto. |
+| **Grado toxicológico** | No | Clasificación toxicológica indicada por el fabricante. |
+| **Laboratorio / fabricante** | No | Empresa responsable del producto. |
+| **Antídoto** | No | Información de antídoto cuando aplique. |
+| **Plagas que controla** | Sí | Al menos una categoría completa o una plaga específica. |
+| **Métodos de aplicación** | Sí | Uno o varios métodos permitidos. |
+| **Ficha técnica** | No | PDF o imagen asociada al producto. |
+
 ## Crear un producto
 
 Selecciona **Nuevo producto**.
@@ -243,6 +258,24 @@ Si el producto ya fue utilizado, eliminarlo no es la opción adecuada. Desactív
 | **Desactivar** | Oculta el producto de nuevas selecciones y lo mueve a **Inactivos**. | Se conserva. |
 | **Reactivar** | Devuelve el producto a **Activos** y a nuevas selecciones. | Se conserva. |
 | **Eliminar** | Retira definitivamente un producto que no tiene referencias ni historial. | Solo es posible cuando no existe historial que proteger. |
+
+## Validaciones y problemas frecuentes
+
+Si intentas guardar con campos obligatorios incompletos, el sistema marca los campos que debes revisar y muestra el mensaje **Revisa los campos marcados**.
+
+Si ocurre un error al guardar, el formulario conserva los datos para que puedas corregir el problema y volver a intentarlo.
+
+### La ficha técnica no se abre
+
+La ficha técnica se abre en una nueva pestaña. Si el navegador la bloquea, permite ventanas emergentes para el sitio y vuelve a seleccionar **Ver ficha técnica**.
+
+### El producto cambió mientras lo editaba
+
+Los productos utilizan control de versión. Si otro administrador modifica el mismo registro antes de que guardes, el sistema evita sobrescribir silenciosamente esos cambios y te permite actualizar el registro antes de continuar.
+
+### No puedo eliminar el producto
+
+Si el producto tiene referencias o historial, no puede eliminarse. Usa **Desactivar** para retirarlo de nuevas selecciones sin perder información histórica.
 
 ## Preguntas frecuentes
 
