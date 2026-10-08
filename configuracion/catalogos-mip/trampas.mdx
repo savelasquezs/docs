@@ -1,0 +1,281 @@
+---
+title: "Gestión de trampas"
+sidebarTitle: "Trampas"
+description: "Crea, consulta, edita, desactiva, reactiva y elimina trampas del catálogo MIP."
+icon: "lamp-desk"
+keywords:
+  - "crear trampa"
+  - "editar trampa"
+  - "desactivar trampa"
+  - "reactivar trampa"
+  - "eliminar trampa"
+  - "trampa adhesiva"
+  - "lámpara UV"
+  - "rastreros"
+  - "voladores"
+  - "monitoreo de trampas"
+---
+
+import { ManualVideo, VideoTimestamp } from '/snippets/manual-video.jsx';
+
+Las trampas son dispositivos utilizados para el monitoreo dentro de la operación MIP. Cada registro conserva un nombre, una clasificación de monitoreo y su estado.
+
+<ManualVideo
+  id="video-trampas"
+  src="https://pub-2559f81105d04a23a042fba8f4f13697.r2.dev/manual/mip-gestion-trampas/v1/mip-gestion-trampas-v1.mp4"
+  title="Gestión de trampas · 2:22"
+/>
+
+<Note>
+  Necesitas estar operando con el rol activo **Administrador** para crear o modificar trampas.
+</Note>
+
+## Dónde encontrar las trampas
+
+Abre **Configuración → Catálogos MIP → Trampas**.
+
+<VideoTimestamp target="video-trampas" seconds={8.933}>Ver en el video · 0:09</VideoTimestamp>
+
+Selecciona la pestaña **Trampas** dentro de Catálogos MIP.
+
+<VideoTimestamp target="video-trampas" seconds={16.308}>Ver en el video · 0:16</VideoTimestamp>
+
+La pantalla separa las trampas entre **Activas** e **Inactivas** y muestra el nombre, el tipo de monitoreo, el estado y las acciones disponibles.
+
+<VideoTimestamp target="video-trampas" seconds={23.128}>Ver en el video · 0:23</VideoTimestamp>
+
+## Buscar y filtrar trampas
+
+Puedes buscar una trampa por su nombre y utilizar el filtro **Monitoreo** para limitar la lista a **Rastreros** o **Voladores**.
+
+<VideoTimestamp target="video-trampas" seconds={31.824}>Ver en el video · 0:32</VideoTimestamp>
+
+El filtro solo afecta lo que ves en pantalla. No modifica la clasificación guardada en cada trampa.
+
+## Campos de una trampa
+
+| Campo | Requerido | Uso |
+| --- | --- | --- |
+| **Nombre** | Sí | Nombre con el que identificarás el dispositivo en el catálogo. |
+| **Monitoreo** | Sí | Define si la trampa pertenece al grupo **Rastreros** o **Voladores**. |
+| **Estado** | Automático | Determina si la trampa puede utilizarse en nuevas selecciones. |
+
+Cada trampa debe pertenecer a **una sola** clasificación de monitoreo.
+
+## Crear una trampa
+
+Selecciona **Nueva trampa**.
+
+<VideoTimestamp target="video-trampas" seconds={37.602}>Ver en el video · 0:38</VideoTimestamp>
+
+<Steps>
+  <Step title="Escribe el nombre">
+    Registra un nombre claro que permita reconocer el dispositivo durante la operación.
+
+    <VideoTimestamp target="video-trampas" seconds={40.923}>
+      Ver en el video · 0:41
+    </VideoTimestamp>
+  </Step>
+
+  <Step title="Selecciona el tipo de monitoreo">
+    Elige exactamente una opción: **Rastreros** o **Voladores**.
+
+    <VideoTimestamp target="video-trampas" seconds={45.938}>
+      Ver en el video · 0:46
+    </VideoTimestamp>
+  </Step>
+
+  <Step title="Guarda la trampa">
+    Cuando la información esté completa, selecciona **Crear trampa**.
+
+    <VideoTimestamp target="video-trampas" seconds={62.297}>
+      Ver en el video · 1:02
+    </VideoTimestamp>
+  </Step>
+</Steps>
+
+Cuando finalice el guardado, la nueva trampa aparecerá en **Activas**.
+
+<VideoTimestamp target="video-trampas" seconds={66.185}>Ver en el video · 1:06</VideoTimestamp>
+
+## Qué significa Rastreros o Voladores
+
+La clasificación **Rastreros / Voladores** pertenece al monitoreo. Indica en qué grupo operativo puede utilizarse la trampa.
+
+<VideoTimestamp target="video-trampas" seconds={51.160}>Ver en el video · 0:51</VideoTimestamp>
+
+Por ejemplo:
+
+- **Trampa adhesiva** puede pertenecer a **Rastreros**.
+- **Lámpara UV** puede pertenecer a **Voladores**.
+
+<Warning>
+  La clasificación de monitoreo no es la misma que las categorías químicas utilizadas en la cobertura de Productos. Una trampa clasificada como **Rastreros** pertenece al grupo de monitoreo, mientras que un producto puede utilizar categorías como **Insectos rastreros** o **Roedores**.
+</Warning>
+
+En la demostración se selecciona **Voladores**.
+
+<VideoTimestamp target="video-trampas" seconds={59.348}>Ver en el video · 0:59</VideoTimestamp>
+
+## Consultar el detalle de una trampa
+
+Selecciona el nombre de la trampa en la tabla.
+
+<VideoTimestamp target="video-trampas" seconds={69.767}>Ver en el video · 1:10</VideoTimestamp>
+
+El detalle muestra:
+
+- el estado;
+- la clasificación de monitoreo.
+
+<VideoTimestamp target="video-trampas" seconds={73.392}>Ver en el video · 1:13</VideoTimestamp>
+
+Desde el detalle también puedes seleccionar **Editar**.
+
+## Editar una trampa
+
+Selecciona **Editar** desde el detalle o desde la columna **Acciones**.
+
+<VideoTimestamp target="video-trampas" seconds={77.609}>Ver en el video · 1:18</VideoTimestamp>
+
+Puedes modificar el nombre y, cuando el registro lo permita, la clasificación de monitoreo. Después selecciona **Guardar cambios**.
+
+<VideoTimestamp target="video-trampas" seconds={83.090}>Ver en el video · 1:23</VideoTimestamp>
+
+La tabla se actualiza con el registro guardado sin necesidad de volver a crear la trampa.
+
+## Acciones disponibles
+
+Cada fila incluye las acciones:
+
+- **Editar**
+- **Desactivar** o **Reactivar**
+- **Eliminar**
+
+<VideoTimestamp target="video-trampas" seconds={86.605}>Ver en el video · 1:27</VideoTimestamp>
+
+## Desactivar una trampa
+
+Usa **Desactivar** cuando la trampa ya no deba utilizarse en nuevas selecciones, pero necesites conservar su historial.
+
+<VideoTimestamp target="video-trampas" seconds={91.130}>Ver en el video · 1:31</VideoTimestamp>
+
+<Steps>
+  <Step title="Selecciona Desactivar">
+    Usa la acción **Desactivar** en la fila de la trampa.
+  </Step>
+
+  <Step title="Confirma la acción">
+    El sistema indica que la trampa dejará de ofrecerse para nuevas selecciones y que su historial se conservará.
+
+    <VideoTimestamp target="video-trampas" seconds={97.912}>
+      Ver en el video · 1:38
+    </VideoTimestamp>
+  </Step>
+
+  <Step title="Comprueba Inactivas">
+    Abre la pestaña **Inactivas**. La trampa aparecerá allí.
+
+    <VideoTimestamp target="video-trampas" seconds={101.728}>
+      Ver en el video · 1:42
+    </VideoTimestamp>
+  </Step>
+</Steps>
+
+## Reactivar una trampa
+
+Abre **Inactivas**, localiza la trampa y selecciona **Reactivar**.
+
+<VideoTimestamp target="video-trampas" seconds={105.191}>Ver en el video · 1:45</VideoTimestamp>
+
+Después de confirmar, vuelve a **Activas** y queda disponible para nuevas selecciones.
+
+<VideoTimestamp target="video-trampas" seconds={110.049}>Ver en el video · 1:50</VideoTimestamp>
+
+## Eliminar una trampa
+
+Usa **Eliminar** únicamente cuando el registro no tenga referencias ni historial.
+
+<VideoTimestamp target="video-trampas" seconds={114.413}>Ver en el video · 1:54</VideoTimestamp>
+
+<Warning>
+  Si una trampa ya fue utilizada, no debe eliminarse para forzar su desaparición. Desactívala para impedir nuevas selecciones y conservar la trazabilidad.
+</Warning>
+
+Si la trampa no tiene referencias ni historial, confirma **Eliminar**.
+
+<VideoTimestamp target="video-trampas" seconds={123.134}>Ver en el video · 2:03</VideoTimestamp>
+
+Al finalizar, el registro desaparece del catálogo sin afectar las demás trampas.
+
+<VideoTimestamp target="video-trampas" seconds={128.231}>Ver en el video · 2:08</VideoTimestamp>
+
+## Diferencia entre desactivar y eliminar
+
+| Acción | Resultado | Historial |
+| --- | --- | --- |
+| **Desactivar** | Mueve la trampa a **Inactivas** y evita nuevas selecciones. | Se conserva. |
+| **Reactivar** | Devuelve la trampa a **Activas**. | Se conserva. |
+| **Eliminar** | Retira definitivamente una trampa sin referencias ni historial. | Solo es posible cuando no existe historial que proteger. |
+
+## Validaciones y problemas frecuentes
+
+### Faltan campos obligatorios
+
+Para guardar una trampa debes completar **Nombre** y **Monitoreo**. Si falta información, el sistema marca el campo correspondiente y muestra **Revisa los campos marcados**.
+
+### La trampa cambió mientras la editaba
+
+Las trampas utilizan control de versión. Si otro administrador modifica el mismo registro antes de que guardes, el sistema evita sobrescribir silenciosamente esos cambios y conserva tu borrador para que puedas decidir cómo continuar.
+
+### No puedo eliminar una trampa
+
+Si el registro tiene referencias o historial, la eliminación segura no está disponible. Utiliza **Desactivar**.
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Cómo creo una trampa?">
+    Abre **Configuración → Catálogos MIP → Trampas**, selecciona **Nueva trampa**, escribe el nombre, elige **Rastreros** o **Voladores** y selecciona **Crear trampa**.
+
+    <VideoTimestamp target="video-trampas" seconds={37.602}>
+      Ver en el video · 0:38
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Cuál es la diferencia entre una trampa para Rastreros y una para Voladores?">
+    La diferencia es su clasificación de monitoreo. **Rastreros** y **Voladores** determinan el grupo operativo donde puede utilizarse el dispositivo.
+
+    <VideoTimestamp target="video-trampas" seconds={51.160}>
+      Ver en el video · 0:51
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Rastreros y Voladores son categorías de productos químicos?">
+    No. En Trampas son clasificaciones de monitoreo. Las categorías químicas de Productos se administran de forma independiente.
+  </Accordion>
+
+  <Accordion title="¿Dónde aparecen las trampas desactivadas?">
+    En la pestaña **Inactivas** del catálogo de Trampas.
+
+    <VideoTimestamp target="video-trampas" seconds={101.728}>
+      Ver en el video · 1:42
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Cómo vuelvo a activar una trampa?">
+    Abre **Inactivas**, localiza la trampa, selecciona **Reactivar** y confirma.
+
+    <VideoTimestamp target="video-trampas" seconds={105.191}>
+      Ver en el video · 1:45
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Por qué no puedo eliminar una trampa?">
+    La eliminación corresponde únicamente a registros sin referencias ni historial. Si ya fue utilizada, desactívala.
+  </Accordion>
+
+  <Accordion title="¿Cuál es la diferencia entre desactivar y eliminar una trampa?">
+    **Desactivar** conserva la trampa y su historial, pero evita nuevas selecciones. **Eliminar** retira definitivamente un registro que todavía no tiene referencias ni historial.
+  </Accordion>
+</AccordionGroup>
