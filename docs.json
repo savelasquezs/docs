@@ -14,13 +14,7 @@
         "language": "es",
         "default": true,
         "pages": [
-          {
-            "group": "Inicio",
-            "icon": "house",
-            "pages": [
-              "index"
-            ]
-          },
+          "index",
           {
             "group": "Configuración",
             "icon": "settings",
