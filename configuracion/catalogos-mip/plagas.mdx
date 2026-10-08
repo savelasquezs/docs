@@ -1,0 +1,302 @@
+---
+title: "Gestión de plagas"
+sidebarTitle: "Plagas"
+description: "Crea, clasifica, consulta, edita, desactiva, reactiva y elimina plagas del catálogo MIP."
+icon: "bug"
+keywords:
+  - "crear plaga"
+  - "editar plaga"
+  - "desactivar plaga"
+  - "reactivar plaga"
+  - "eliminar plaga"
+  - "monitoreo con trampas"
+  - "categoría para productos"
+  - "insectos rastreros"
+  - "insectos voladores"
+  - "roedores"
+---
+
+import { ManualVideo, VideoTimestamp } from '/snippets/manual-video.jsx';
+
+Las plagas son los registros que el sistema utiliza tanto para el **monitoreo con trampas** como para definir qué **productos** pueden controlarlas.
+
+<ManualVideo
+  id="video-plagas"
+  src="https://pub-2559f81105d04a23a042fba8f4f13697.r2.dev/manual/mip-gestion-plagas/v1/mip-gestion-plagas-v1.mp4"
+  title="Gestión de plagas · 2:39"
+/>
+
+<Note>
+  Necesitas estar operando con el rol activo **Administrador** para crear o modificar plagas.
+</Note>
+
+## Dónde encontrar las plagas
+
+Abre **Configuración → Catálogos MIP → Plagas**.
+
+<Card title="Abrir Plagas activas" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/plagas/activos" cta="Abrir en el sistema">
+  Ir directamente al catálogo de plagas activas.
+</Card>
+
+<VideoTimestamp target="video-plagas" seconds={15.435}>Ver en el video · 0:15</VideoTimestamp>
+
+El listado muestra el nombre, el monitoreo con trampas, la categoría para productos, el estado y las acciones disponibles.
+
+<VideoTimestamp target="video-plagas" seconds={22.529}>Ver en el video · 0:23</VideoTimestamp>
+
+## Buscar y filtrar plagas
+
+Puedes buscar una plaga por su nombre y filtrar el listado por monitoreo **Rastreros** o **Voladores**.
+
+<VideoTimestamp target="video-plagas" seconds={31.007}>Ver en el video · 0:31</VideoTimestamp>
+
+El filtro solo cambia lo que ves en pantalla. No modifica la clasificación guardada en la plaga.
+
+## Campos de una plaga
+
+| Campo | Requerido | Uso |
+| --- | --- | --- |
+| **Nombre** | Sí | Nombre con el que identificarás la plaga. |
+| **Monitoreo con trampas** | Sí | Define qué tipo de trampa permite monitorear la plaga: Rastreros o Voladores. |
+| **Categoría para productos** | Sí | Define qué tipo de producto se utiliza para controlar la plaga. |
+| **Estado** | Automático | Determina si puede utilizarse en nuevas selecciones. |
+
+## Crear una plaga
+
+Selecciona **Nueva plaga**.
+
+<VideoTimestamp target="video-plagas" seconds={35.625}>Ver en el video · 0:36</VideoTimestamp>
+
+<Steps>
+  <Step title="Escribe el nombre">
+    Registra un nombre claro que permita reconocer la plaga durante la operación.
+
+    <VideoTimestamp target="video-plagas" seconds={38.964}>
+      Ver en el video · 0:39
+    </VideoTimestamp>
+  </Step>
+
+  <Step title="Define el monitoreo con trampas">
+    Selecciona **Rastreros** o **Voladores** según el tipo de trampa que permite monitorear esa plaga.
+
+    La ayuda del formulario lo resume así: **“Define si esta plaga se monitorea con trampas para rastreros o para voladores.”**
+
+    <VideoTimestamp target="video-plagas" seconds={43.404}>
+      Ver en el video · 0:43
+    </VideoTimestamp>
+  </Step>
+
+  <Step title="Define la categoría para productos">
+    Esta clasificación responde una pregunta diferente: **¿qué tipo de producto se utiliza para controlar esta plaga?**
+
+    El icono de ayuda explica que los voladores se agrupan como **Insectos voladores**, mientras que en rastreros se diferencian **Insectos rastreros** y **Roedores**.
+
+    <VideoTimestamp target="video-plagas" seconds={56.577}>
+      Ver en el video · 0:57
+    </VideoTimestamp>
+  </Step>
+
+  <Step title="Guarda la plaga">
+    Cuando el nombre y las clasificaciones estén completas, selecciona **Crear plaga**.
+
+    <VideoTimestamp target="video-plagas" seconds={74.920}>
+      Ver en el video · 1:15
+    </VideoTimestamp>
+  </Step>
+</Steps>
+
+## Entender las dos clasificaciones
+
+**Monitoreo con trampas** y **Categoría para productos** no significan lo mismo.
+
+### Monitoreo con trampas
+
+Indica con qué grupo de trampas puede monitorearse la plaga:
+
+- **Rastreros**
+- **Voladores**
+
+Por ejemplo, un roedor pertenece a **Rastreros** porque se monitorea con trampas de ese grupo.
+
+### Categoría para productos
+
+Indica qué productos pueden controlarla:
+
+- **Insectos rastreros**
+- **Insectos voladores**
+- **Roedores**
+
+<Warning>
+  Un roedor puede pertenecer a **Rastreros** en monitoreo y a **Roedores** en productos. No es una contradicción: son dos clasificaciones con propósitos diferentes.
+</Warning>
+
+### Cuando seleccionas Voladores
+
+Si eliges **Voladores**, el sistema asigna automáticamente **Insectos voladores** como categoría para productos.
+
+<VideoTimestamp target="video-plagas" seconds={50.456}>Ver en el video · 0:50</VideoTimestamp>
+
+### Cuando seleccionas Rastreros
+
+Si eliges **Rastreros**, debes indicar si la plaga corresponde a:
+
+- **Insectos rastreros**
+- **Roedores**
+
+<VideoTimestamp target="video-plagas" seconds={63.263}>Ver en el video · 1:03</VideoTimestamp>
+
+En la demostración se selecciona **Roedores**.
+
+<VideoTimestamp target="video-plagas" seconds={68.905}>Ver en el video · 1:09</VideoTimestamp>
+
+## Consultar el detalle de una plaga
+
+Selecciona el nombre de la plaga en la tabla.
+
+<VideoTimestamp target="video-plagas" seconds={83.831}>Ver en el video · 1:24</VideoTimestamp>
+
+El detalle muestra por separado:
+
+- el **Monitoreo con trampas**;
+- la **Categoría para productos**;
+- el estado.
+
+<VideoTimestamp target="video-plagas" seconds={87.212}>Ver en el video · 1:27</VideoTimestamp>
+
+## Editar una plaga
+
+Selecciona **Editar** desde el detalle o desde la columna **Acciones**.
+
+<VideoTimestamp target="video-plagas" seconds={94.502}>Ver en el video · 1:35</VideoTimestamp>
+
+Modifica la información permitida y selecciona **Guardar cambios**.
+
+<VideoTimestamp target="video-plagas" seconds={99.649}>Ver en el video · 1:40</VideoTimestamp>
+
+<Warning>
+  Si la plaga ya tiene relaciones o historial, el sistema protege su identidad semántica. No debes cambiarla o eliminarla para reinterpretar información histórica; en esos casos, desactívala.
+</Warning>
+
+## Acciones disponibles
+
+Cada fila incluye:
+
+- **Editar**
+- **Desactivar** o **Reactivar**
+- **Eliminar**
+
+<VideoTimestamp target="video-plagas" seconds={103.176}>Ver en el video · 1:43</VideoTimestamp>
+
+## Desactivar una plaga
+
+Usa **Desactivar** cuando ya no deba ofrecerse para nuevas selecciones, pero necesites conservar sus relaciones e historial.
+
+<Card title="Abrir Plagas activas" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/plagas/activos" cta="Abrir en el sistema">
+  Ir directamente al catálogo de plagas activas.
+</Card>
+
+<VideoTimestamp target="video-plagas" seconds={107.702}>Ver en el video · 1:48</VideoTimestamp>
+
+Después de confirmar, desaparece de **Activas**.
+
+<VideoTimestamp target="video-plagas" seconds={115.105}>Ver en el video · 1:55</VideoTimestamp>
+
+Abre **Inactivas** para consultarla.
+
+<Card title="Abrir Plagas inactivas" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/plagas/inactivos" cta="Abrir en el sistema">
+  Ir directamente al catálogo de plagas inactivas.
+</Card>
+
+<VideoTimestamp target="video-plagas" seconds={119.159}>Ver en el video · 1:59</VideoTimestamp>
+
+## Reactivar una plaga
+
+Desde **Inactivas**, selecciona **Reactivar** y confirma.
+
+<VideoTimestamp target="video-plagas" seconds={122.243}>Ver en el video · 2:02</VideoTimestamp>
+
+La plaga vuelve a **Activas** y queda disponible para nuevas selecciones.
+
+<VideoTimestamp target="video-plagas" seconds={127.358}>Ver en el video · 2:07</VideoTimestamp>
+
+## Eliminar una plaga
+
+Usa **Eliminar** únicamente cuando el registro no tenga relaciones ni historial.
+
+<Card title="Abrir Plagas activas" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/plagas/activos" cta="Abrir en el sistema">
+  Ir directamente al catálogo de plagas activas.
+</Card>
+
+<VideoTimestamp target="video-plagas" seconds={131.666}>Ver en el video · 2:12</VideoTimestamp>
+
+Si la plaga ya fue utilizada, la opción correcta es **Desactivar**.
+
+Cuando no tiene historial, confirma **Eliminar**.
+
+<VideoTimestamp target="video-plagas" seconds={140.145}>Ver en el video · 2:20</VideoTimestamp>
+
+## Diferencia entre desactivar y eliminar
+
+| Acción | Resultado | Historial |
+| --- | --- | --- |
+| **Desactivar** | La plaga deja de ofrecerse para nuevas selecciones y pasa a **Inactivas**. | Se conserva. |
+| **Reactivar** | Devuelve la plaga a **Activas**. | Se conserva. |
+| **Eliminar** | Retira definitivamente una plaga sin relaciones ni historial. | Solo es posible cuando no existe información que proteger. |
+
+## Validaciones y problemas frecuentes
+
+### Falta la categoría para productos
+
+Si seleccionas **Rastreros**, también debes elegir **Insectos rastreros** o **Roedores**. El formulario muestra **“Selecciona la categoría de producto.”**
+
+### ¿Por qué Voladores no me deja elegir otra categoría?
+
+Porque las plagas de monitoreo **Voladores** pertenecen automáticamente a **Insectos voladores** para productos.
+
+### No puedo eliminar una plaga
+
+Si tiene relaciones o historial, el sistema conserva su identidad. Utiliza **Desactivar**.
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Qué significa Monitoreo con trampas?">
+    Indica qué grupo de trampas permite monitorear la plaga: **Rastreros** o **Voladores**.
+
+    <VideoTimestamp target="video-plagas" seconds={43.404}>
+      Ver en el video · 0:43
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Qué significa Categoría para productos?">
+    Indica qué tipo de producto se utiliza para controlar la plaga: **Insectos rastreros**, **Insectos voladores** o **Roedores**.
+
+    <VideoTimestamp target="video-plagas" seconds={56.577}>
+      Ver en el video · 0:57
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Por qué un roedor aparece como Rastrero?">
+    Porque **Rastreros** describe el grupo de monitoreo con trampas. Para productos, el mismo registro pertenece a **Roedores**.
+  </Accordion>
+
+  <Accordion title="¿Dónde aparecen las plagas desactivadas?">
+    En la pestaña **Inactivas** del catálogo de Plagas.
+
+    <VideoTimestamp target="video-plagas" seconds={119.159}>
+      Ver en el video · 1:59
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Cómo vuelvo a activar una plaga?">
+    Abre **Inactivas**, selecciona **Reactivar** y confirma.
+
+    <VideoTimestamp target="video-plagas" seconds={122.243}>
+      Ver en el video · 2:02
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Por qué no puedo eliminar una plaga?">
+    Si el registro tiene relaciones o historial, el sistema protege su identidad. Desactívalo para impedir nuevas selecciones sin perder trazabilidad.
+  </Accordion>
+</AccordionGroup>
