@@ -1,0 +1,11 @@
+# Internal repository files that must never become documentation pages.
+README.md
+AGENTS.md
+LICENSE
+LICENSE.md
+CHANGELOG.md
+CONTRIBUTING.md
+
+# Draft content
+drafts/
+*.draft.mdx
