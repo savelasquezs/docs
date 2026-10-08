@@ -1,0 +1,280 @@
+---
+title: "Gestión de criterios MIP"
+sidebarTitle: "Criterios"
+description: "Crea, consulta, edita, desactiva, reactiva y elimina criterios MIP de evaluación."
+icon: "clipboard-check"
+keywords:
+  - "crear criterio MIP"
+  - "editar criterio MIP"
+  - "desactivar criterio"
+  - "reactivar criterio"
+  - "eliminar criterio"
+  - "todas las áreas"
+  - "solo exterior"
+  - "perímetro"
+  - "C CP NC NA"
+---
+
+import { ManualVideo, VideoTimestamp } from '/snippets/manual-video.jsx';
+
+Los criterios MIP definen **qué evalúa el técnico dentro de cada área** durante un Servicio Principal.
+
+<ManualVideo
+  id="video-criterios"
+  src="https://pub-2559f81105d04a23a042fba8f4f13697.r2.dev/manual/mip-gestion-criterios/v1/mip-gestion-criterios-v1.mp4"
+  title="Gestión de criterios MIP · 2:37"
+/>
+
+<Note>
+  Necesitas estar operando con el rol activo **Administrador** para crear o modificar criterios.
+</Note>
+
+## Dónde encontrar los criterios
+
+Abre **Configuración → Catálogos MIP → Criterios**.
+
+<Card title="Abrir Criterios activos" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/criterios/activos" cta="Abrir en el sistema">
+  Ir directamente al catálogo de criterios activos.
+</Card>
+
+<VideoTimestamp target="video-criterios" seconds={16.984}>Ver en el video · 0:17</VideoTimestamp>
+
+El listado muestra el nombre, la aplicación, el estado y las acciones disponibles.
+
+<VideoTimestamp target="video-criterios" seconds={24.961}>Ver en el video · 0:25</VideoTimestamp>
+
+## Buscar criterios
+
+Usa el buscador para localizar un criterio por su nombre.
+
+<VideoTimestamp target="video-criterios" seconds={31.298}>Ver en el video · 0:31</VideoTimestamp>
+
+El listado se presenta alfabéticamente.
+
+## Campos de un criterio
+
+| Campo | Requerido | Uso |
+| --- | --- | --- |
+| **Nombre** | Sí | Describe el aspecto que debe evaluar el técnico. |
+| **Aplicación** | Sí | Define si el criterio aplica a todas las áreas o solo a áreas externas/perimetrales. |
+| **Estado** | Automático | Determina si el criterio se utiliza en servicios nuevos. |
+
+## Crear un criterio
+
+Selecciona **Nuevo criterio**.
+
+<VideoTimestamp target="video-criterios" seconds={36.298}>Ver en el video · 0:36</VideoTimestamp>
+
+<Steps>
+  <Step title="Escribe el nombre">
+    Usa un nombre claro que describa el aspecto que debe evaluar el técnico.
+
+    <VideoTimestamp target="video-criterios" seconds={39.752}>
+      Ver en el video · 0:40
+    </VideoTimestamp>
+  </Step>
+
+  <Step title="Define dónde aplica">
+    Selecciona **Todas las áreas** o **Solo exterior / perímetro**.
+
+    <VideoTimestamp target="video-criterios" seconds={44.083}>
+      Ver en el video · 0:44
+    </VideoTimestamp>
+  </Step>
+
+  <Step title="Guarda el criterio">
+    Cuando la información esté lista, selecciona **Crear criterio**.
+
+    <VideoTimestamp target="video-criterios" seconds={71.715}>
+      Ver en el video · 1:12
+    </VideoTimestamp>
+  </Step>
+</Steps>
+
+## Todas las áreas vs. Solo exterior / perímetro
+
+### Todas las áreas
+
+El criterio se incluye tanto en áreas internas como externas.
+
+<VideoTimestamp target="video-criterios" seconds={49.695}>Ver en el video · 0:50</VideoTimestamp>
+
+### Solo exterior / perímetro
+
+El criterio se agrega únicamente cuando el área está marcada como externa.
+
+<VideoTimestamp target="video-criterios" seconds={54.983}>Ver en el video · 0:55</VideoTimestamp>
+
+Un ejemplo típico es **Mantenimiento de zonas verdes**, que aplica a áreas externas/perimetrales.
+
+## Estados C, CP, NC y NA
+
+Los valores de evaluación:
+
+- **C** — Cumple
+- **CP** — Cumple parcialmente
+- **NC** — No cumple
+- **NA** — No aplica
+
+son **valores fijos del sistema**. No se crean ni se editan desde Catálogos MIP.
+
+<VideoTimestamp target="video-criterios" seconds={61.057}>Ver en el video · 1:01</VideoTimestamp>
+
+<Note>
+  En el cálculo del resultado, **CP** equivale a la mitad de **C**, **NC** vale cero y **NA** se excluye del denominador.
+</Note>
+
+## Consultar el detalle de un criterio
+
+Selecciona el nombre del criterio en la tabla.
+
+<VideoTimestamp target="video-criterios" seconds={82.628}>Ver en el video · 1:23</VideoTimestamp>
+
+El detalle muestra:
+
+- el estado;
+- la aplicación configurada.
+
+<VideoTimestamp target="video-criterios" seconds={86.560}>Ver en el video · 1:27</VideoTimestamp>
+
+## Editar un criterio
+
+Selecciona **Editar** desde el detalle o desde la columna **Acciones**.
+
+<VideoTimestamp target="video-criterios" seconds={90.622}>Ver en el video · 1:31</VideoTimestamp>
+
+Puedes cambiar el nombre o la aplicación y seleccionar **Guardar cambios**.
+
+<VideoTimestamp target="video-criterios" seconds={98.030}>Ver en el video · 1:38</VideoTimestamp>
+
+<Note>
+  Renombrar o desactivar un criterio solo afecta servicios que todavía no hayan iniciado. Los servicios iniciados conservan un snapshot de los criterios aplicables para mantener estable el histórico.
+</Note>
+
+## Acciones disponibles
+
+Cada fila incluye:
+
+- **Editar**
+- **Desactivar** o **Reactivar**
+- **Eliminar**
+
+<VideoTimestamp target="video-criterios" seconds={101.855}>Ver en el video · 1:42</VideoTimestamp>
+
+## Desactivar un criterio
+
+Usa **Desactivar** cuando ya no deba utilizarse en servicios nuevos, pero necesites conservar el histórico.
+
+<Card title="Abrir Criterios activos" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/criterios/activos" cta="Abrir en el sistema">
+  Ir directamente al catálogo de criterios activos.
+</Card>
+
+<VideoTimestamp target="video-criterios" seconds={106.871}>Ver en el video · 1:47</VideoTimestamp>
+
+Confirma la acción para retirarlo de **Activos**.
+
+<VideoTimestamp target="video-criterios" seconds={113.859}>Ver en el video · 1:54</VideoTimestamp>
+
+El criterio aparecerá en **Inactivos**.
+
+<Card title="Abrir Criterios inactivos" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/criterios/inactivos" cta="Abrir en el sistema">
+  Ir directamente al catálogo de criterios inactivos.
+</Card>
+
+<VideoTimestamp target="video-criterios" seconds={117.773}>Ver en el video · 1:58</VideoTimestamp>
+
+## Reactivar un criterio
+
+Desde **Inactivos**, selecciona **Reactivar** y confirma.
+
+<VideoTimestamp target="video-criterios" seconds={121.374}>Ver en el video · 2:01</VideoTimestamp>
+
+El criterio vuelve a **Activos** y queda disponible para servicios nuevos.
+
+<VideoTimestamp target="video-criterios" seconds={126.376}>Ver en el video · 2:06</VideoTimestamp>
+
+## Eliminar un criterio
+
+Usa **Eliminar** únicamente cuando no tenga referencias ni historial.
+
+<Card title="Abrir Criterios activos" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/catalogos/criterios/activos" cta="Abrir en el sistema">
+  Ir directamente al catálogo de criterios activos.
+</Card>
+
+<VideoTimestamp target="video-criterios" seconds={131.038}>Ver en el video · 2:11</VideoTimestamp>
+
+Si el criterio ya fue utilizado, la opción correcta es **Desactivar**.
+
+Cuando no tiene historial, confirma **Eliminar**.
+
+<VideoTimestamp target="video-criterios" seconds={139.521}>Ver en el video · 2:20</VideoTimestamp>
+
+## Diferencia entre desactivar y eliminar
+
+| Acción | Resultado | Historial |
+| --- | --- | --- |
+| **Desactivar** | El criterio deja de utilizarse en servicios nuevos y pasa a **Inactivos**. | Se conserva. |
+| **Reactivar** | Devuelve el criterio a **Activos**. | Se conserva. |
+| **Eliminar** | Retira definitivamente un criterio sin referencias ni historial. | Solo es posible cuando no existe información que proteger. |
+
+## Validaciones y problemas frecuentes
+
+### Falta el nombre
+
+**Nombre** es obligatorio. Si está vacío, el sistema marca el campo correspondiente.
+
+### Falta la aplicación
+
+Debes seleccionar dónde aplica el criterio. El formulario muestra **“Selecciona dónde aplica el criterio.”**
+
+### ¿Cambiar un criterio altera servicios anteriores?
+
+No. Los servicios que ya iniciaron conservan un snapshot de los criterios aplicables.
+
+### No puedo eliminar un criterio
+
+Si tiene referencias o historial, utiliza **Desactivar**.
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Qué diferencia hay entre Todas las áreas y Solo exterior / perímetro?">
+    **Todas las áreas** incluye el criterio en áreas internas y externas. **Solo exterior / perímetro** lo utiliza únicamente cuando el área está marcada como externa.
+
+    <VideoTimestamp target="video-criterios" seconds={44.083}>
+      Ver en el video · 0:44
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Puedo crear nuevos estados además de C, CP, NC y NA?">
+    No. Esos cuatro valores son fijos del sistema y no se administran desde este catálogo.
+
+    <VideoTimestamp target="video-criterios" seconds={61.057}>
+      Ver en el video · 1:01
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Qué pasa si desactivo un criterio?">
+    Deja de utilizarse en servicios nuevos. Los servicios iniciados conservan su snapshot histórico.
+  </Accordion>
+
+  <Accordion title="¿Dónde aparecen los criterios desactivados?">
+    En la pestaña **Inactivos** del catálogo de Criterios.
+
+    <VideoTimestamp target="video-criterios" seconds={117.773}>
+      Ver en el video · 1:58
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Cómo vuelvo a activar un criterio?">
+    Abre **Inactivos**, selecciona **Reactivar** y confirma.
+
+    <VideoTimestamp target="video-criterios" seconds={121.374}>
+      Ver en el video · 2:01
+    </VideoTimestamp>
+  </Accordion>
+
+  <Accordion title="¿Por qué no puedo eliminar un criterio?">
+    La eliminación corresponde únicamente a registros sin referencias ni historial. Si ya fue utilizado, desactívalo.
+  </Accordion>
+</AccordionGroup>
