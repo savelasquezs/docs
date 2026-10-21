@@ -21,7 +21,8 @@
             "pages": [
               "gestion/clientes",
               "gestion/sedes",
-              "gestion/vehiculos"
+              "gestion/vehiculos",
+              "gestion/areas"
             ]
           },
           {
