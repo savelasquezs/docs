@@ -1,0 +1,166 @@
+---
+title: "Gestión y reutilización de áreas"
+sidebarTitle: "Áreas"
+description: "Crea, clasifica, edita y reutiliza las Áreas de una Sede en diferentes servicios sin perder el historial."
+icon: "layout-grid"
+keywords:
+  - "áreas"
+  - "área"
+  - "sede"
+  - "reutilizar áreas"
+  - "servicio principal"
+  - "historial de áreas"
+  - "crear área"
+  - "editar área"
+  - "zona exterior"
+  - "perímetro"
+  - "desactivar área"
+  - "recorrido por áreas"
+---
+
+Las **Áreas** son los espacios de una Sede que se inspeccionan durante los servicios de control integrado de plagas: por ejemplo, Cocina, Bodega o Patio. Se administran una vez desde la Sede y se **reutilizan en las siguientes visitas**, evitando duplicar su registro.
+
+<Note>
+  Para agregar o modificar Áreas, utiliza el rol activo **Administrador**. Las Áreas pertenecen a Sedes de clientes **Negocio**.
+</Note>
+
+## Dónde encontrar las Áreas
+
+Entra en **Clientes**, selecciona el **Negocio**, abre la **Sede** y pulsa la pestaña **Áreas**.
+
+<Card title="Abrir Clientes" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/clientes" cta="Abrir en el sistema">
+  Desde la ficha del Negocio, abre una Sede y selecciona **Áreas**.
+</Card>
+
+El listado muestra el nombre, la ubicación **Interior** o **Exterior / perímetro**, la cantidad de **puestos de monitoreo** y el estado **Activa** o **Inactiva**.
+
+## Crear una nueva Área
+
+<Steps>
+  <Step title="Selecciona Agregar Área">
+    En la pestaña **Áreas**, pulsa **Agregar Área**. Se abrirá un cuadro de registro.
+  </Step>
+  <Step title="Escribe el nombre">
+    Completa el campo **Nombre del Área**, por ejemplo, *Zona de carga*.
+
+    Usa un nombre que el técnico pueda identificar fácilmente cuando recorra la Sede.
+  </Step>
+  <Step title="Indica la ubicación">
+    Si el espacio es exterior, marca **Zona exterior o perimetral**. Si no la marcas, el Área se considera **Interior**.
+  </Step>
+  <Step title="Guarda">
+    Selecciona **Agregar Área** en el formulario. La nueva Área se incorpora al listado.
+  </Step>
+</Steps>
+
+<Warning>
+  El nombre es obligatorio. Una misma Sede no permite dos Áreas con el mismo nombre, incluso si solo cambia el uso de mayúsculas.
+</Warning>
+
+## Áreas interiores y exteriores
+
+| Clasificación | Ejemplo | Aplicación en los servicios |
+| --- | --- | --- |
+| **Interior** | Cocina, Bodega, Producción | Incluye los criterios generales aplicables al Área. |
+| **Exterior / perímetro** | Patio, Zona de carga, Perímetro | Puede incluir, además, los criterios configurados **Solo exterior / perímetro**. |
+
+La opción **Zona exterior o perimetral** no describe un puesto de monitoreo: define cómo se clasifica el Área y cuáles criterios MIP le corresponden durante una visita.
+
+## Consultar un Área
+
+Selecciona el nombre de un Área en el listado para abrir su detalle. Allí podrás consultar su clasificación y el número de puestos de monitoreo asociados.
+
+Desde ese detalle también tienes acceso a **Editar Área**.
+
+## Editar un Área
+
+Selecciona el icono de **Editar** en su fila o **Editar Área** desde el panel de detalle. El sistema utiliza el mismo formulario que para crearla, con los valores actuales precargados.
+
+Puedes modificar el **Nombre del Área** y la casilla **Zona exterior o perimetral**. Selecciona **Guardar cambios** para confirmar.
+
+<Note>
+  Los cambios de nombre o clasificación se aplican a la configuración actual de la Sede y a la preparación de visitas futuras. **No reescriben los datos históricos** de los servicios que ya iniciaron.
+</Note>
+
+## Reutilizar las mismas Áreas en diferentes servicios
+
+**No necesitas crear de nuevo las Áreas para cada visita.** El sistema conserva una estructura de Áreas vinculada a la Sede y reutiliza sus registros.
+
+<Steps>
+  <Step title="Configura la Sede una sola vez">
+    Registra sus espacios habituales: Cocina, Bodega, Patio y los demás que correspondan.
+  </Step>
+  <Step title="Programa un Servicio Principal">
+    El servicio se relaciona con la Sede. Al preparar el recorrido, se consideran las **Áreas activas** de esa Sede.
+  </Step>
+  <Step title="Inicia el servicio">
+    En ese momento el sistema guarda una **copia histórica** de las Áreas del recorrido: su nombre, clasificación interior o exterior y los criterios y puestos de monitoreo aplicables.
+  </Step>
+  <Step title="Realiza una siguiente visita">
+    El nuevo servicio vuelve a utilizar la **configuración activa y actualizada de la Sede**. Cada servicio mantiene su propio recorrido y sus resultados.
+  </Step>
+</Steps>
+
+### ¿Qué ocurre si modifico un Área después de un servicio?
+
+Por ejemplo, el técnico completó una visita en la **Cocina**. Días después, el Administrador cambia su nombre a **Cocina principal**.
+
+- La visita ya iniciada conserva el nombre y la clasificación guardados en su propia copia histórica.
+- Las siguientes visitas pueden utilizar el nombre actualizado.
+- No se eliminan ni trasladan las evaluaciones, revisiones y hallazgos anteriores por el simple hecho de cambiar el nombre.
+
+### Orden de recorrido
+
+En un Servicio Principal, el técnico puede reorganizar el orden en el que visita las Áreas. **Ese orden pertenece al servicio**, no a la configuración permanente de la Sede: la siguiente visita no tiene por qué conservarlo.
+
+### ¿Y si desactivo un Área?
+
+Un Área **inactiva** deja de formar parte de los recorridos nuevos. Los servicios anteriores conservan su información y las referencias históricas.
+
+## Desactivar, reactivar o eliminar
+
+| Acción | Cuándo usarla | Resultado |
+| --- | --- | --- |
+| **Desactivar** | El Área deja de inspeccionarse, pero ya tiene puestos, hallazgos o historial. | Permanece registrada y conserva sus relaciones históricas. |
+| **Reactivar** | Se vuelve a utilizar un espacio que estaba inactivo. | Regresa al conjunto de Áreas activas para los próximos servicios. |
+| **Eliminar** | El Área fue creada por error y **no tiene dependencias**. | El registro se retira definitivamente después de confirmar. |
+
+### Eliminar un Área sin dependencias
+
+En su fila, pulsa el icono **Eliminar** y confirma. Si no existen referencias que lo impidan, el Área desaparece del listado.
+
+### Cuando un Área ya tiene historial
+
+Si intentas eliminar un Área con puestos de monitoreo o hallazgos, el sistema impide la eliminación y ofrece **Desactivar**.
+
+Los servicios y evaluaciones históricas también están protegidos: no debes eliminar sus Áreas de origen para corregir la configuración de la Sede.
+
+### Reactivar un Área
+
+Localiza el registro marcado como **Inactiva** y utiliza la acción **Reactivar**. Su historial sigue intacto.
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Debo volver a crear las Áreas cada vez que programo un servicio?">
+    No. Las Áreas se administran por Sede y las activas se reutilizan en cada Servicio Principal. Los resultados y el recorrido pertenecen a cada servicio.
+  </Accordion>
+  <Accordion title="¿Qué pasa con los servicios anteriores si renombro un Área?">
+    Las visitas iniciadas conservan su propia copia de los datos del Área. El cambio no modifica retrospectivamente su historial.
+  </Accordion>
+  <Accordion title="¿Por qué es importante marcar Exterior / perímetro?">
+    Porque algunos criterios MIP están definidos exclusivamente para Áreas exteriores y se incluyen según esa clasificación.
+  </Accordion>
+  <Accordion title="¿Puedo cambiar el orden de las Áreas para una visita?">
+    Sí. El técnico puede ordenar el recorrido dentro del servicio sin modificar las Áreas de la Sede ni el recorrido de otras visitas.
+  </Accordion>
+  <Accordion title="¿Por qué no puedo eliminar un Área?">
+    Si tiene puestos de monitoreo, hallazgos u otras referencias históricas, debes desactivarla para conservar los datos existentes.
+  </Accordion>
+  <Accordion title="¿Dónde veo cuántos puestos tiene un Área?">
+    En la tabla de Áreas y al seleccionar el nombre del Área para consultar su detalle.
+  </Accordion>
+  <Accordion title="¿Puedo registrar dos Áreas llamadas Cocina en la misma Sede?">
+    No. El nombre de cada Área debe ser único dentro de una misma Sede. En diferentes Sedes sí pueden existir Áreas con el mismo nombre.
+  </Accordion>
+</AccordionGroup>
