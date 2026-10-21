@@ -20,7 +20,8 @@
             "icon": "building-2",
             "pages": [
               "gestion/clientes",
-              "gestion/sedes"
+              "gestion/sedes",
+              "gestion/vehiculos"
             ]
           },
           {

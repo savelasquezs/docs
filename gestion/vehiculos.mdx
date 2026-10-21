@@ -1,0 +1,143 @@
+---
+title: "Gestión de vehículos"
+sidebarTitle: "Vehículos"
+description: "Registra vehículos por Sede, normaliza placas, conserva estados y consulta certificados históricos."
+icon: "car-front"
+keywords:
+  - "vehículos"
+  - "placas"
+  - "Sedes"
+  - "crear vehículo"
+  - "editar placa"
+  - "desactivar vehículo"
+  - "reactivar vehículo"
+  - "certificado vehicular"
+  - "historial de certificados"
+---
+
+La sección **Vehículos** permite al Administrador registrar las placas que pertenecen a una Sede, mantener sus estados y consultar los certificados expedidos para cada vehículo.
+
+<Note>
+  Para administrar vehículos, la Sede debe ser de tipo **Negocio**, estar activa y tener habilitada la opción **Maneja vehículos**. La configuración se encuentra en **Editar Sede**. Para crear o modificar vehículos necesitas el rol activo **Administrador**.
+</Note>
+
+## Dónde encontrar los vehículos
+
+Abre **Clientes**, selecciona un **Negocio**, ingresa a su **Sede** y entra en la pestaña **Vehículos**.
+
+<Card title="Abrir Clientes" icon="external-link" horizontal href="https://sr-doc-app-links.solucionesradicales1.workers.dev/go/clientes" cta="Abrir en el sistema">
+  Selecciona el Negocio, abre la Sede y entra en **Vehículos**.
+</Card>
+
+El listado presenta **placa**, **estado** y **acciones**. En la parte superior encontrarás el total de vehículos registrados, cuántos están activos y el buscador por placa.
+
+## Crear un vehículo
+
+<Steps>
+  <Step title="Abre el formulario">
+    Dentro de **Vehículos**, selecciona **Agregar vehículo**.
+  </Step>
+  <Step title="Registra la placa">
+    Escribe la **Placa**. Es el único dato obligatorio del formulario.
+
+    No necesitas escribirla en mayúsculas: la aplicación la convierte automáticamente y la base de datos también la conserva en mayúsculas.
+  </Step>
+  <Step title="Guarda el registro">
+    Selecciona **Crear vehículo**. La nueva placa aparece en el listado sin necesidad de recargar toda la página.
+  </Step>
+</Steps>
+
+<Warning>
+  No puedes repetir la misma placa dentro de una Sede, aunque la escribas usando mayúsculas y minúsculas diferentes.
+</Warning>
+
+## Buscar por placa
+
+En **Buscar por placa**, escribe una parte de la placa para filtrar el listado de inmediato. No necesitas escribirla completa ni distinguir entre mayúsculas y minúsculas.
+
+## Editar un vehículo
+
+En la fila correspondiente, selecciona la acción **Editar** (icono de lápiz). Se abrirá el mismo formulario usado para crear el vehículo, con la placa existente cargada.
+
+Cambia la placa y selecciona **Guardar cambios**.
+
+<Note>
+  La placa de un vehículo que ya tiene servicios o certificados asociados **no puede modificarse**, porque debe conservarse la identificación histórica. Si necesitas registrar otra placa, desactiva el vehículo anterior y crea uno nuevo.
+</Note>
+
+## Consultar los certificados del vehículo
+
+En la columna **Acciones**, selecciona el **icono de documento** correspondiente al vehículo.
+
+Se abre un cuadro con el historial de certificados, ordenados del más reciente al más antiguo. Cada registro presenta:
+
+- el número o identificador de la solicitud del servicio;
+- la **fecha de expedición**;
+- la **fecha de vencimiento**;
+- la posibilidad de **ver el PDF**, si todavía está disponible.
+
+### Ver el certificado
+
+Selecciona **Ver** junto al certificado deseado para mostrarlo dentro de la misma ventana, sin salir de la Sede.
+
+Para volver al historial, selecciona **Volver a certificados**.
+
+### Descargar el certificado
+
+Con el documento abierto, selecciona **Descargar PDF**.
+
+<Note>
+  Si el archivo PDF ya no está disponible debido a su período de conservación, su registro histórico sigue apareciendo en la lista, pero no se puede abrir desde allí.
+</Note>
+
+<Warning>
+  Esta pantalla sirve para **consultar** certificados, no para generarlos ni enviarlos. La emisión y el envío se realizan desde **Configuración → Certificados**.
+</Warning>
+
+## Desactivar, eliminar y reactivar
+
+| Acción | Cuándo utilizarla | Qué ocurre con el historial |
+| --- | --- | --- |
+| **Eliminar** | Cuando el vehículo todavía no tiene servicios, certificados ni otras dependencias. | El registro puede retirarse definitivamente. |
+| **Desactivar** | Cuando el vehículo deja de utilizarse, pero tiene información histórica que debe conservarse. | Se conservan el vehículo, los servicios y los certificados. |
+| **Reactivar** | Cuando un vehículo inactivo vuelve a utilizarse en la Sede. | Se mantiene todo su historial anterior. |
+
+### Eliminar o desactivar
+
+Selecciona **Eliminar** en la fila de un vehículo activo. Si el sistema detecta que tiene historial o dependencias, no lo borra y te ofrece **Desactivar**.
+
+El vehículo desactivado continúa visible con el estado **Inactivo** y permite seguir consultando sus certificados.
+
+### Reactivar
+
+Localiza el vehículo inactivo y selecciona **Reactivar**. Volverá a estar activo siempre que la Sede esté habilitada para manejar vehículos.
+
+## ¿Qué pasa si la Sede deja de manejar vehículos?
+
+Los registros y certificados existentes se mantienen disponibles para consulta. Para agregar nuevos vehículos o reactivarlos, primero vuelve a habilitar **Maneja vehículos** desde la configuración de la Sede.
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Necesito escribir la placa en mayúsculas?">
+    No. El sistema la normaliza antes de almacenarla y la base de datos exige que quede en mayúsculas.
+  </Accordion>
+  <Accordion title="¿Puedo registrar la misma placa dos veces en una Sede?">
+    No. Cada Sede tiene una validación de placa única que no distingue entre mayúsculas y minúsculas.
+  </Accordion>
+  <Accordion title="¿Por qué no puedo editar la placa?">
+    Si el vehículo ya tiene servicios o certificados asociados, su placa queda protegida para conservar la información histórica.
+  </Accordion>
+  <Accordion title="¿Por qué no puedo eliminar un vehículo?">
+    Si tiene dependencias o historial, utiliza **Desactivar**. De ese modo dejará de utilizarse sin perder sus certificados.
+  </Accordion>
+  <Accordion title="¿Puedo consultar certificados de un vehículo inactivo?">
+    Sí. El historial permanece disponible desde el icono de documento.
+  </Accordion>
+  <Accordion title="¿Dónde genero un certificado nuevo?">
+    En **Configuración → Certificados**. La pestaña Vehículos permite consultar y descargar documentos ya generados.
+  </Accordion>
+  <Accordion title="¿Qué hago si el PDF figura como no disponible?">
+    El registro histórico sigue visible. Si necesitas el documento nuevamente, revisa el servicio correspondiente y el flujo de generación de certificados.
+  </Accordion>
+</AccordionGroup>
